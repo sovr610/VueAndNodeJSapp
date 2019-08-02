@@ -95,9 +95,21 @@ app.get('/swagger.json', async(req, res, next) => {
  *           properties:
  *             users:
  *               type: array
- *               description: all the users
+ *               description: all the users in an array
  *               items:
- *                 type: object
+ *                 user_id:
+ *                   type: string
+ *                 firstName:
+ *                   type: string
+ *                 lastName:
+ *                   type: string
+ *                 age:
+ *                   type: integer
+ *           example:
+ *             user_id: 0
+ *             firstName: Parker
+ *             lastName: Bidigare
+ *             age: 26    
  */
 app.get("/user", async(req, res, next) => {
 
