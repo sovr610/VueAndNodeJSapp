@@ -79,6 +79,9 @@ DB.createTable = function(tableOptions, result, rejected) {
     });
 }
 
+
+
+
 /**
  *
  * @param {object} insertOptions the table name, columns and values to insert into

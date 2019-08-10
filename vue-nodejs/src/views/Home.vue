@@ -2,12 +2,59 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="content">
+      <div v-if="activetab === 1" class="tabcontent">
+        <dataTable></dataTable>
+      </div>
+      <div v-if="activetab === 2" class="tabcontent">
+        <div class="tabTwoDiv">
+          <div class="row">
+            <div class="col">
+              <label class="text">User ID:</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="user_id" />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col">
+              <label class="text">User First Name:</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="user_firstName" />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col">
+              <label class="text">User Last Name:</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="user_lastName" />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col">
+              <label class="text">User Age:</label>
+            </div>
+            <div class="col">
+              <input type="number" min="0" class="form-control" id="user_age" />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col">
+              <button class="btn-lg btn-success text" id="submit" v-on:click="addUser()">Submit</button>
+            </div>
+          </div>
+          <br />
+          <label class="text text-center alert" id="errorMsg"></label>
 
-    <div class="tabs">
-        <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">View Users</a>
-        <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">Add User</a>
+        </div>
+      </div>
     </div>
-
   </div>
 </template>
 
